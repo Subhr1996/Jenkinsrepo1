@@ -16,10 +16,10 @@ pipeline {
                 bat 'python --version'
             }
         }
-        stage ('extract') (
+        stage ('extract') {
             steps {
                 bat 'python extract.py'
             }
-        )
+        }
     }
 }
