@@ -13,12 +13,12 @@ pipeline {
         }
         stage ('python version') {
             steps {
-                bat 'python --version'
+                bat '%PYTHON% --version'
             }
         }
         stage ('extract') {
             steps {
-                bat 'python extract.py'
+                bat '%PYTHON% extract.py'
             }
         }
     }
