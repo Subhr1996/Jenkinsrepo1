@@ -13,13 +13,13 @@ pipeline {
 
         stage('Setup Python') {
             steps {
-                bat '${env.PYTHON} --version'
+                bat '%PYTHON% --version'
             }
         }
 
         stage('Extract'){
             steps {
-                bat '${env.PYTHON} extract.py'
+                bat '%PYTHON% extract.py'
             }
         }
     }
