@@ -6,18 +6,18 @@ pipeline {
     }
 
     stages {
-        stage {
-            steps ('checkout') {
+        stage ('checkout') {
+            steps {
                 checkout scm
             }
         }
-        stage {
-            steps ('python version') {
+        stage ('python version') {
+            steps {
                 bat 'python --version'
             }
         }
-        stage (
-            steps ('extract') {
+        stage ('extract') (
+            steps {
                 bat 'python extract.py'
             }
         )
